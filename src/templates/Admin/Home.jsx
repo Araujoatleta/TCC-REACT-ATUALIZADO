@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
+import Carousel from 'react-bootstrap/Carousel';
 import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 import logo from '../../assets/images/home.png'
 import './Home.css';
 import backgroundImage from '../../assets/images/background1.png';
 import Logo from '../../assets/images/1.svg'
+import Imagem from '../../assets/images/footer.png'
 const Home = () => {
 
     return (
      <>
      
     <header>     
-  <div id="logo1">
-    <a href="../img/logo-barbers-club.svg">
-    <img src="../img/logo-barbers-club.svg" alt="Logo barbearia" />
-</a>
-</div> 
-      
-    </header>
-
     <aside>
       <div id="menuToggle">
           <input type="checkbox" />
@@ -26,7 +21,7 @@ const Home = () => {
           <span></span>
           <span></span>
           
-          <ul class="menu" data-theme='t-orange'>
+          <ul className="menu" data-theme='t-orange'>
               <a href="../index-UI.html">
                   <li>Home</li>
               </a>
@@ -48,10 +43,12 @@ const Home = () => {
           </ul>
       </div>
   </aside>
+    </header>
+
   
   <section className="s-hero"  style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div class="container">
-        <div class="left-area">
+      <div className="container">
+        <div className="left-area">
           <h1>Admin Area</h1>
           
           <p> 
@@ -61,29 +58,40 @@ const Home = () => {
           </p>
           </div>
         </div>
-
+        <div>
+      <h4>React-Bootstrap Carousel Component</h4>
+      <Carousel>
+        <Carousel.Item>
+          <img
+            src="./1.svg"
+            alt="Image One"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
+            alt="Image Two"
+          />
+        </Carousel.Item>
+      </Carousel>
+    </div>
     </section>
-    <section class="s-villain">
+    <section className="s-villain">
 
-      <div class="container">
+      <div className="container">
         <img src="../img/i" alt=""/>
       </div>
 
     </section>
     
     <footer>
-      <div class="testimonial-container">
-        <div class="image-section">
-            <img src="../img/footer.png" alt="Depoimento de R10" class="testimonial-image"/>
-        </div>
 
-        <h2 class="Depoimento">DEPOIMENTOS</h2>
-        <div class="text-section">
-            <p class="testimonial-text">"Desde que comecei a parceria com a BC (Barber's Club) nunca mais tive problemas com horários e agendamentos"</p>
-            <p class="author">"R10"</p>
-            <img src="../img/image-1555.png" alt="aspas"/>
+        <h2 className="Depoimento">DEPOIMENTOS</h2>
+        <div className="text-section">
+            <p className="testimonial-text">"Desde que comecei a parceria com a BC (Barber's Club) nunca mais tive problemas com horários e agendamentos"</p>
+            <p className="author">"R10"</p>
+            <img src= {Imagem} id="imagem-footer" alt="aspas"/>
           </div>
-    </div>
       
     </footer>
 </>
